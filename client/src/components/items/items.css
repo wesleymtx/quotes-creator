@@ -1,0 +1,41 @@
+.items-quotes{
+    margin: 0 auto;
+    max-width: 50%;
+    font-size: 1.5rem;
+    background: #393e46;
+    margin-bottom: 100px;
+    padding: 1rem;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: -1px 0px 15px 0px rgba(0,0,0,0.25);
+    transition: 1s;
+}
+.items-quotes:hover{
+    box-shadow: -1px 0px 15px 0px rgba(0,0,0,0.55);
+}
+
+.items-quotes li{
+    word-wrap:break-word;
+}
+
+.item-quote{
+    text-align: center;
+    margin: 0.7rem 0;
+    background: #1d2d50;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0.8rem;
+    box-shadow: -1px 0px 15px 0px rgba(33, 35, 151, 0.233);
+    transition: 1s;
+}
+.item-quote:hover{
+    box-shadow: -1px 0px 15px 0px rgba(33, 35, 151, 0.8);
+}
+/*
+
+.ul-item{
+
+    margin: 0.8rem;
+    padding: 0.2rem;
+    display: block;
+    border-bottom: 1px solid #000;
+
+} */

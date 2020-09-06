@@ -1,0 +1,52 @@
+.form-sign-quotes{
+    width: 19rem;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+.form-sign-quotes label{
+    font-size: 1.5rem;
+}
+.form-sign-quotes textarea{
+    font-size: 1.5rem;
+    width: 17.5rem;
+}
+.input-submit{
+    float: right;
+    font-size: 1.5em;
+    padding: 0.2em 0.6em;
+    background: #393e46;
+    outline: none;
+    margin: 0.7rem 0;
+    transition: 1s;
+    color: #eeeeee;
+    border: none;
+}
+.input-submit:hover{
+    box-shadow: 2px 7px #32e0c4;
+    background: #222831;
+}
+.input-submit::-ms-browse{
+    box-shadow: 2px 7px #32e0c4;
+    background: #eeeeee;
+}
+.input-text{
+    font-size: 1.5em;
+    background: #393e46;
+    border: 0;
+    margin: 0.7rem 0;
+    color: #FFF;
+    padding: 0.2em 0.6em;
+    transition: box-shadow 1s;
+}
+
+.input-text:hover {
+    box-shadow: 2px 7px #32e0c4;
+    background: #222831;
+}
+.input-text:focus{
+    background: #393e46;
+    border: none;
+    outline: none;
+
+}
