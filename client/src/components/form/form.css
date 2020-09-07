@@ -1,19 +1,19 @@
 .form-sign-quotes{
-    width: 19rem;
-    display: inline-block;
-    vertical-align: top;
-    float: left;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5rem;
 }
 .form-sign-quotes label{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .form-sign-quotes textarea{
-    font-size: 1.5rem;
-    width: 17.5rem;
+    font-size: 1.2rem;
+    width: 100%;
 }
 .input-submit{
     float: right;
-    font-size: 1.5em;
+    font-size: 1rem;
     padding: 0.2em 0.6em;
     background: #393e46;
     outline: none;
@@ -21,6 +21,7 @@
     transition: 1s;
     color: #eeeeee;
     border: none;
+    width: 45%;
 }
 .input-submit:hover{
     box-shadow: 2px 7px #32e0c4;
@@ -31,13 +32,14 @@
     background: #eeeeee;
 }
 .input-text{
-    font-size: 1.5em;
+    font-size: 1rem;
     background: #393e46;
     border: 0;
     margin: 0.7rem 0;
     color: #FFF;
-    padding: 0.2em 0.6em;
+    /* padding: 0.2em 0.6em; */
     transition: box-shadow 1s;
+    width: 100%;
 }
 
 .input-text:hover {
@@ -50,3 +52,9 @@
     outline: none;
 
 }
+
+@media (max-width: 940px){
+    .form-sign-quotes{
+        width: 100%;
+    }
+  }

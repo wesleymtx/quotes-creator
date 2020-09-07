@@ -2,7 +2,8 @@ const express = require('express')
 const bodyParser= require('body-parser')
 const app = express();
 const MongoClient = require('mongodb').MongoClient
-var cors = require('cors')
+var cors = require('cors');
+const { ObjectId } = require('mongodb');
 
 require('dotenv').config({path: '.env'})
 
@@ -62,7 +63,11 @@ MongoClient.connect(process.env.DB_NAME, { useUnifiedTopology: true })
   })
 
   app.delete('/quotes', (req, res) => {
-    quotesCollection.deleteOne()
+    quotesCollection.findOneAndDelete(
+      {},
+      {sort: {_id: -1}}
+      // {_id: ObjectId(req.body._id)}
+    )
     .then(result => {
         if(result.deletedCount === 0)
           return res.json('No quote to delete')

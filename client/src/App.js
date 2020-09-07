@@ -4,20 +4,25 @@ import Items from './components/items/items'
 import Form from './components/form/form'
 function App() {
   const  [data, setData] = useState([])
+  const [listName, setListName] = useState('list')
 
   useEffect(()=>{
     getQuotes()
   }, [])
+  const changeListName = (e) => {
+    setListName(e.target.value)
+  }
   const submitQuote = e => {
     e.preventDefault();
+    setListName(e.target[0].value)
     fetch('http://localhost:9000/quotes', {
       method:"post",
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name: e.target[0].value,
-        quote: e.target[1].value
+        name: e.target[1].value,
+        quote: e.target[2].value
       })
     })
     .then(res => getQuotes())
@@ -33,12 +38,36 @@ function App() {
       setData(dataQuotes)
     })
   }
-  
+  const deleteQuote = () => {
+    fetch('http://localhost:9000/quotes', {
+      method: 'delete',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: 'teste',
+        _id: '5f558e14617c061dd0733a06'
+      })
+    })
+
+    .then(res => {
+      if (res.ok) return res.json()
+    })
+    .then(res => {
+      getQuotes()
+      console.log(res)
+    })
+  }
   return (
     <div className="container">
       <h1 className="title">teste</h1>
-      <Form onSubmit={submitQuote}/>
-      <Items data={data}/>
+      <div className="div-teste">
+        <Form onSubmit={submitQuote} changeListName={changeListName} deleteQuote={deleteQuote}/>
+        
+        <Items data={data} listName={listName}/>
+       
+        
+      </div>
     </div>
   );
 }
