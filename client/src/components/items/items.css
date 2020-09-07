@@ -10,6 +10,10 @@
     display: block;
     margin: 0 auto;
 }
+.items-quotes h2{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
 .items-quotes:hover{
     box-shadow: -1px 0px 15px 0px rgba(0,0,0,0.55);
 }

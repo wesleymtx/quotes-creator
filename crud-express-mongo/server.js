@@ -76,6 +76,14 @@ MongoClient.connect(process.env.DB_NAME, { useUnifiedTopology: true })
     .catch(error => console.error(error))
   })
 
+  app.delete('/selectedQuote', (req, res) => {
+    quotesCollection.deleteOne(
+      {_id: ObjectId(req.body._id)}
+    )
+    .then(result => res.json('Deleted selected quote'))
+    .catch(error=>console.error(error))
+  })
+
 })
 .catch(error => console.error(error))
 

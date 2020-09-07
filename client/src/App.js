@@ -4,11 +4,14 @@ import Items from './components/items/items'
 import Form from './components/form/form'
 function App() {
   const  [data, setData] = useState([])
-  const [listName, setListName] = useState('list')
+  const [listName, setListName] = useState('list-name')
 
   useEffect(()=>{
     getQuotes()
   }, [])
+  useEffect(()=>{
+    document.title=listName;
+  })
   const changeListName = (e) => {
     setListName(e.target.value)
   }
@@ -60,11 +63,11 @@ function App() {
   }
   return (
     <div className="container">
-      <h1 className="title">teste</h1>
+      <h1 className="title"><center>Quotes Creater</center></h1>
       <div className="div-teste">
         <Form onSubmit={submitQuote} changeListName={changeListName} deleteQuote={deleteQuote}/>
         
-        <Items data={data} listName={listName}/>
+        <Items data={data} getQuotes={()=>{getQuotes()}} listName={listName}/>
        
         
       </div>
