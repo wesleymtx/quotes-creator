@@ -67,9 +67,7 @@ function App() {
     <div className="container">
       <h1 className="title"><center>Quotes Creater</center></h1>
       <div className="div-teste">
-        <button onClick={getQuotes}>clique</button>
         <Form onSubmit={submitQuote} changeListName={changeListName} deleteQuote={deleteQuote}/>
-        
         <Items data={data} getQuotes={getQuotes} listName={listName}/>
        
         

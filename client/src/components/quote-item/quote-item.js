@@ -46,17 +46,17 @@ const QuoteItem = (props) => {
         return <div>
             <form onSubmit={(e)=>{editQuote(e, props._id)}}>
               <input className="input-name" defaultValue={props.name}/><br/>
-              <input className="input-quote" defaultValue={props.quote}/><br/>
-              {/* <button onClick={editQuote}>Edit</button> */}
-              <input type="submit"/>
+              <input className="input-quote" autoFocus defaultValue={props.quote}/><br/>
+              <input className="select-submit" type="submit"/>
+              <button className="select-cancel" onClick={toggleEdit}>Cancelar</button>
             </form>
         </div>
 
       return  <div className="ul-item">
                 <li className="item-name">{props.name}</li>
                 <li className="item-quote">"{props.quote}"</li>
-                <button onClick={()=>{deleteSelected(props._id)}}>Delete</button>
-                <button onClick={toggleEdit}>Edit</button>
+                <button className="select-delete" onClick={()=>{deleteSelected(props._id)}}>Delete</button>
+                <button className="select-edit" onClick={toggleEdit}>Edit</button>
             </div>
       
 }

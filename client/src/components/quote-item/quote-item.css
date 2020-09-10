@@ -23,5 +23,38 @@
     width: 100%;
     outline: none;
     height: 2rem;
+}
+.select-delete{
+    margin: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 5px 5px 5px 5px;
+    background: #fe7171;
+    color: #eeeeee;
+    outline: none;
+}
+.select-edit{
+    margin: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 5px 5px 5px 5px;
+    background: #7e8a97;
+    color: #eeeeee;
+    outline: none;
+}
+.select-submit{
+    margin: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 5px 5px 5px 5px;
+    background: #7e8a97;
+    color: #eeeeee;
+    outline: none;
+}
+
+.select-cancel{
+    margin: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 5px 5px 5px 5px;
+    background: #7e8a97;
+    color: #eeeeee;
+    outline: none;
     
 }
