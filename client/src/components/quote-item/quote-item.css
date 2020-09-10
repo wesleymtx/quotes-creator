@@ -1,0 +1,27 @@
+.input-quote{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin: 0.7rem 0;
+    background: #1d2d50;
+    font-size: 1.1rem;
+    color: #eeeeee;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: -1px 0px 15px 0px rgba(33, 35, 151, 0.233);
+    transition: 1s;
+    width: 100%;
+    outline: none;
+    height: 3rem;
+}
+.input-name{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    background: none;
+    font-size: 1.1rem;
+    color: #eeeeee;
+    padding: 0.5rem;
+    transition: 1s;
+    width: 100%;
+    outline: none;
+    height: 2rem;
+    
+}

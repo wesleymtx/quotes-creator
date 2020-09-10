@@ -44,7 +44,7 @@ MongoClient.connect(process.env.DB_NAME, { useUnifiedTopology: true })
 
   app.put('/quotes', (req, res) => {
     quotesCollection.findOneAndUpdate(
-      { name: 'teste' },
+      {_id: ObjectId(req.body._id)},
       {
         $set: {
           name: req.body.name,
@@ -52,7 +52,7 @@ MongoClient.connect(process.env.DB_NAME, { useUnifiedTopology: true })
         }
       },
       {
-        upsert: true
+        upsert: false
       }
     )
     .then(result => {

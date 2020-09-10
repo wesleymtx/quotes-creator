@@ -3,8 +3,9 @@ import './App.css';
 import Items from './components/items/items'
 import Form from './components/form/form'
 function App() {
+  console.log("Componente renderizado ");
   const  [data, setData] = useState([])
-  const [listName, setListName] = useState('list-name')
+  const [listName, setListName] = useState('List Name')
 
   useEffect(()=>{
     getQuotes()
@@ -38,6 +39,7 @@ function App() {
     })
     .then(res => {
       let dataQuotes = res.reverse()
+      console.log('getQuotes ok')
       setData(dataQuotes)
     })
   }
@@ -65,9 +67,10 @@ function App() {
     <div className="container">
       <h1 className="title"><center>Quotes Creater</center></h1>
       <div className="div-teste">
+        <button onClick={getQuotes}>clique</button>
         <Form onSubmit={submitQuote} changeListName={changeListName} deleteQuote={deleteQuote}/>
         
-        <Items data={data} getQuotes={()=>{getQuotes()}} listName={listName}/>
+        <Items data={data} getQuotes={getQuotes} listName={listName}/>
        
         
       </div>
