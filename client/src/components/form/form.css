@@ -71,6 +71,11 @@
     border-radius: 5px 5px 5px 5px;
 }
 
+.input-delete:hover {
+    box-shadow: 2px 7px #32e0c4;
+    background: #222831;
+}
+
 @media (max-width: 940px){
     .form-sign-quotes{
         width: 100%;

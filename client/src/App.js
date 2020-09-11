@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Items from './components/items/items'
 import Form from './components/form/form'
+require('dotenv').config()
 function App() {
   console.log("Componente renderizado ");
   const  [data, setData] = useState([])

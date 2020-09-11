@@ -47,8 +47,8 @@ const QuoteItem = (props) => {
             <form onSubmit={(e)=>{editQuote(e, props._id)}}>
               <input className="input-name" defaultValue={props.name}/><br/>
               <input className="input-quote" autoFocus defaultValue={props.quote}/><br/>
-              <input className="select-submit" type="submit"/>
               <button className="select-cancel" onClick={toggleEdit}>Cancelar</button>
+              <input className="select-submit" type="submit"/>
             </form>
         </div>
 
