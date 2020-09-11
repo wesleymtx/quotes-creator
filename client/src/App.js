@@ -19,7 +19,7 @@ function App() {
   const submitQuote = e => {
     e.preventDefault();
     setListName(e.target[0].value)
-    fetch('http://localhost:9000/quotes', {
+    fetch(process.env.REACT_APP_API_KEY_QUOTES, {
       method:"post",
       headers: {
         'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ function App() {
     .catch(e => console.log(e))
   }
   const getQuotes = () => {
-    fetch('http://localhost:9000/')
+    fetch(process.env.REACT_APP_API_KEY)
     .then(res => {
       if (res.ok) return res.json() //assincrono
     })
@@ -44,7 +44,7 @@ function App() {
     })
   }
   const deleteQuote = () => {
-    fetch('http://localhost:9000/quotes', {
+    fetch(process.env.REACT_APP_API_KEY_QUOTES, {
       method: 'delete',
       headers: {
         'Content-Type': 'application/json'
@@ -69,8 +69,6 @@ function App() {
       <div className="div-teste">
         <Form onSubmit={submitQuote} changeListName={changeListName} deleteQuote={deleteQuote}/>
         <Items data={data} getQuotes={getQuotes} listName={listName}/>
-       
-        
       </div>
     </div>
   );

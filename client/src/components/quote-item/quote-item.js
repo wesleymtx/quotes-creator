@@ -8,7 +8,7 @@ const QuoteItem = (props) => {
     }
 
     const editQuote = (event, id) => {
-      fetch('http://localhost:9000/quotes', {
+      fetch(process.env.REACT_APP_API_KEY_QUOTES, {
         method: 'put',
         headers: { 'Accept': 'application/json',
         'Content-Type': 'application/json' },
@@ -26,7 +26,7 @@ const QuoteItem = (props) => {
     }
 
     const deleteSelected = (paramId) => {
-        fetch('http://localhost:9000/selectedQuote', {
+        fetch(process.env.REACT_APP_API_KEY_SELECTED_QUOTES, {
           method: 'delete',
           headers: {
             'Content-Type': 'application/json'
